@@ -1,0 +1,65 @@
+*{margin:0;padding:0;}
+#form{
+    float:left;
+    vertical-align: top;
+    height: 225px;
+    width: 264px;
+    margin:0 5px 7px 0;
+    padding: 0 0 20px 10px;
+    border:1px solid silver;
+    background: linear-gradient(silver,grey);
+}
+#contactcards{
+    vertical-align: top;
+    height: auto;
+    width: 85%;
+    margin:0 auto;
+    padding: 7px 0 10px 5px;
+    background: linear-gradient(rgb(0,90,10),rgb(0,180,28));
+    overflow: auto;
+}
+#form span{
+    display: block;
+    margin:3px 0;
+}
+#form h4{margin:9px 0;}
+#form p{margin: 7px 0 5px 0;}
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+}
+.contact{
+    vertical-align: top;
+    display:inline-block;
+    margin:0 6px 7px 0;
+    padding:2px;
+    height: 241px;
+    width: 269px;
+    border:1px solid blue;
+    background-color: cyan;
+}
+.ghusername{display: inline;}
+.names{
+    position: relative;
+    margin:0;
+    padding:0;
+    height: 241px;
+    width: 269px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+.names img{
+    height: 150px;
+    width:auto;
+}
+.description{
+    margin:3px;
+    padding:0;
+    height: 241px;
+    width: 269px;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}

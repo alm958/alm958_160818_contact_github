@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>alm958 Contact github</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles/alm958_160818_contact_github.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $(".hidden").hide();
+
+                $(document).on('click','.names',function(){
+                    $(this).hide();
+                    $(this).siblings().show();
+                })
+                $(document).on('click','.description',function(){
+                    $(this).hide();
+                    $(this).siblings().show();
+                })
+                $('#adduser').click(function(){
+                    $.get('https://api.github.com/users/' + $('#ghusername').val(),function(data){
+                        console.log(data);
+                        $('#contactcards').append("<div class='contact'><div class='names'><p>" +
+                        data.name + "</p><img src='" + data.avatar_url + "'><p>click for more information</p></div><div class='description' style='display:none;'><p>Account created : " + data.created_at + "</p><p> # public repo : " +data.public_repos +"</p><p> # public gist : " +data.public_gists+"</p><p> Location : " +data.location+"</p><p> # followers : " +data.followers+"</p><p> following : " +data.following   + "</p></div></div>")
+                    })
+                    $(this).closest('form').find("input[type=text]").val("")
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id="contactcards">
+            <div id="form">
+                <h4>GitHub users</h4>
+                <form>
+                    <span><label>Github username:</label><input id="ghusername" type="text"></span>
+                    <input id="adduser" type="button" name="adduser" value="Add User">
+                </form> <!--end of form -->
+            </div><!--end of form div -->
+        </div>
+    </body>
+</html>
